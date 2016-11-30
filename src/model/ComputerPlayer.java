@@ -10,6 +10,7 @@ public class ComputerPlayer
 	{
 		int a=game.getHeapA();
 		int b=game.getHeapB();
+		int c=game.getHeapC();
 	}
 
 }
