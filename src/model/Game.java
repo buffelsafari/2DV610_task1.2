@@ -47,4 +47,15 @@ public class Game
 		}
 		return false;
 	}
+	
+	// should remove num sticks from heap, where num is a positive int bigger then 0
+	// and less or equal to the heapSize
+	// heap argument can be 'a' or 'b' or 'c'
+	// returns true if a valid remove is made
+	// returns false if invalid remove, and the heaps remain unchanged
+	public boolean remove(String heap, int num)
+	{
+		
+		return false;
+	}
 }

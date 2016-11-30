@@ -123,6 +123,7 @@ public class GameTest
 		model.Game sut=new model.Game(-5, -3, -1);
 	}
 	
+	// tries all the branches
 	@Test
 	public void isGameOver_viaConstructor_shouldReturnTrue()
 	{
@@ -140,28 +141,46 @@ public class GameTest
 	@Test
 	public void isGameOver_viaConstructor_shouldReturnFalse2()
 	{
-		model.Game sut=new model.Game(1, 1, 0);
+		model.Game sut=new model.Game(0, 1, 0);
 		assertFalse(sut.isGameOver());
 	}
 	
 	@Test
 	public void isGameOver_viaConstructor_shouldReturnFalse3()
 	{
-		model.Game sut=new model.Game(1, 0, 1);
+		model.Game sut=new model.Game(0, 0, 1);
 		assertFalse(sut.isGameOver());
 	}
 	
 	@Test
 	public void isGameOver_viaConstructor_shouldReturnFalse4()
 	{
-		model.Game sut=new model.Game(0, 1, 1);
+		model.Game sut=new model.Game(1, 1, 0);
 		assertFalse(sut.isGameOver());
 	}
 	
 	@Test
 	public void isGameOver_viaConstructor_shouldReturnFalse5()
 	{
-		model.Game sut=new model.Game(0, 1, 9);
+		model.Game sut=new model.Game(1, 0, 1);
 		assertFalse(sut.isGameOver());
 	}
+	
+	@Test
+	public void isGameOver_viaConstructor_shouldReturnFalse6()
+	{
+		model.Game sut=new model.Game(1, 1, 1);
+		assertFalse(sut.isGameOver());
+	}
+	
+	@Test
+	public void remove_shouldReturnHeapSizeViaGetHeapA()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("a", 1);
+		int actual=sut.getHeapA();
+		int expected=2;
+		assertEquals(actual, expected);
+	}
+	
 }
