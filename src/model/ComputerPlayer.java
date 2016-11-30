@@ -42,6 +42,11 @@ public class ComputerPlayer
 			game.remove("a", 1);
 			return;
 		}
+		if(b>0)
+		{
+			game.remove("b", 1);
+			return;
+		}
 		
 	}
 	
