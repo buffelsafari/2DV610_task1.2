@@ -17,24 +17,35 @@ public class ComputerPlayerTest
 	}
 	
 	@Test
-	public void ComputerPlayer_makeMove_shouldCallGetHeapA() 
+	public void makeMove_shouldCallGetHeapA() 
 	{
 		sut.MakeMove(mockGame);		
 		Mockito.verify(mockGame).getHeapA();
 	}
 	
 	@Test
-	public void ComputerPlayer_makeMove_shouldCallGetHeapB() 
+	public void makeMove_shouldCallGetHeapB() 
 	{
 		sut.MakeMove(mockGame);		
 		Mockito.verify(mockGame).getHeapB();
 	}
 	
 	@Test
-	public void ComputerPlayer_makeMove_shouldCallGetHeapC() 
+	public void makeMove_shouldCallGetHeapC() 
 	{
 		sut.MakeMove(mockGame);		
 		Mockito.verify(mockGame).getHeapC();
+	}
+	
+	@Test
+	public void MakeMove_shouldCallRemove()
+	{
+		Mockito.when(mockGame.getHeapA()).thenReturn(3);
+		Mockito.when(mockGame.getHeapA()).thenReturn(5);
+		Mockito.when(mockGame.getHeapA()).thenReturn(7);
+		sut.MakeMove(mockGame);
+		
+		Mockito.verify(mockGame).remove("a", 1);
 	}
 
 }
