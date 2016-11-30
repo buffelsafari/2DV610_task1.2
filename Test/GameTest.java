@@ -302,4 +302,12 @@ public class GameTest
 		model.Game sut=new model.Game(3, 5, 7);
 		assertFalse(sut.remove("d",1));
 	}
+	
+	@Test
+	public void remove_shouldReturnFalse5()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		assertFalse(sut.remove("a",0));
+	}
+	
 }
