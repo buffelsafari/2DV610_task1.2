@@ -38,7 +38,7 @@ public class ComputerPlayerTest
 	}
 	
 	@Test
-	public void MakeMove_shouldCallRemove1()
+	public void MakeMove_shouldCallRemove1() // changed the test in the last commit, calculated wrong
 	{
 		Mockito.when(mockGame.getHeapA()).thenReturn(7);
 		Mockito.when(mockGame.getHeapB()).thenReturn(5);
