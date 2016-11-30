@@ -17,6 +17,7 @@ public class ComputerPlayer
 		int numB=findZeroSumA(b,c,a);
 		int numC=findZeroSumA(c,b,a);
 		
+		// make some winning move
 		if(numA>0)
 		{
 			game.remove("a", numA);
