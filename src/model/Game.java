@@ -9,6 +9,8 @@ public class Game
 	private int heapA;
 	private int heapB;
 	private int heapC;
+	
+	private String lastHeap;
 		
 	public Game(int heapA, int heapB, int heapC)
 	{
@@ -55,6 +57,7 @@ public class Game
 	// returns false if invalid remove, and the heaps remain unchanged
 	public boolean remove(String heap, int num)
 	{
+		lastHeap=heap;
 		if(num<1)
 		{
 			return false;
@@ -83,8 +86,7 @@ public class Game
 	// should return the last heap argument in the remove method
 	// does not matter if the move was valid or not
 	public String getLastHeap()
-	{
-		
-		return null;
+	{		
+		return lastHeap;
 	}
 }
