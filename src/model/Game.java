@@ -8,11 +8,13 @@ public class Game
 {
 	private int heapA;
 	private int heapB;
+	private int heapC;
 		
 	public Game(int heapA, int heapB, int heapC)
 	{
 		this.heapA=heapA;
 		this.heapB=heapB;
+		this.heapC=heapC;
 	}
 
 	public int getHeapA()
@@ -27,6 +29,6 @@ public class Game
 	
 	public int getHeapC()
 	{
-		return 0;
+		return heapC;
 	}
 }
