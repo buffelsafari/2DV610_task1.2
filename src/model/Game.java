@@ -17,4 +17,9 @@ public class Game
 	{
 		return heapA;
 	}
+	
+	public int getHeapB()
+	{
+		return 0;
+	}
 }
