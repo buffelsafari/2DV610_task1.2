@@ -267,4 +267,39 @@ public class GameTest
 		model.Game sut=new model.Game(3, 5, 7);
 		assertTrue(sut.remove("c",7));
 	}
+	
+	@Test
+	public void remove_shouldReturnFalse3()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		assertFalse(sut.remove("c",8));
+	}
+	
+	@Test
+	public void remove_shouldReturnTrue4()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		assertTrue(sut.remove("a",2));
+	}
+	
+	@Test
+	public void remove_shouldReturnTrue5()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		assertTrue(sut.remove("b",2));
+	}
+	
+	@Test
+	public void remove_shouldReturnTrue6()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		assertTrue(sut.remove("c",2));
+	}
+	
+	@Test
+	public void remove_shouldReturnFalse4()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		assertFalse(sut.remove("d",1));
+	}
 }
