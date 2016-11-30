@@ -15,6 +15,7 @@ public class ComputerPlayer
 		
 		int numA=findZeroSumA(a,b,c);
 		int numB=findZeroSumA(b,c,a);
+		int numC=findZeroSumA(c,b,a);
 		
 		if(numA>0)
 		{
@@ -27,7 +28,12 @@ public class ComputerPlayer
 			game.remove("b", numB);
 			return;
 		}
-						
+		
+		if(numC>0)
+		{
+			game.remove("c", numC);
+			return;
+		}		
 		
 	}
 	
