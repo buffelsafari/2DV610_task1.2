@@ -41,6 +41,10 @@ public class Game
 	// should be true if all heaps are empty
 	public boolean isGameOver()
 	{
+		if(heapA==0 && heapB==0 && heapC==0)
+		{
+			return true;
+		}
 		return false;
 	}
 }
