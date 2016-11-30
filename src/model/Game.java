@@ -12,6 +12,7 @@ public class Game
 		
 	public Game(int heapA, int heapB, int heapC)
 	{
+		// negative numbers not allowed
 		if(heapA<0)
 		{
 			throw new IllegalArgumentException();
