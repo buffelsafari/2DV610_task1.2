@@ -55,6 +55,10 @@ public class Game
 	// returns false if invalid remove, and the heaps remain unchanged
 	public boolean remove(String heap, int num)
 	{
+		if(num<1)
+		{
+			return false;
+		}
 		if(heap.equals("a") && num<=heapA)
 		{
 			heapA-=num;
