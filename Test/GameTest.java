@@ -325,12 +325,32 @@ public class GameTest
 	}
 	
 	@Test
-	public void getLastHeap_shouldReturnHeap()
+	public void getLastHeap_shouldReturnHeap1()
 	{
 		model.Game sut=new model.Game(3, 5, 7);
 		sut.remove("a", 1);
 		String actual=sut.getLastHeap();
 		String expected="a";
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void getLastHeap_shouldReturnHeap2()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("b", 1);
+		String actual=sut.getLastHeap();
+		String expected="b";
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void getLastHeap_shouldReturnHeap3()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("c", 1);
+		String actual=sut.getLastHeap();
+		String expected="c";
 		assertEquals(actual, expected);
 	}
 	
