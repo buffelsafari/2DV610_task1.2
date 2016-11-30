@@ -38,7 +38,7 @@ public class ComputerPlayerTest
 	}
 	
 	@Test
-	public void MakeMove_shouldCallRemove1() // changed the test in the last commit, calculated wrong
+	public void MakeMove_shouldCallRemove1() 
 	{
 		Mockito.when(mockGame.getHeapA()).thenReturn(7);
 		Mockito.when(mockGame.getHeapB()).thenReturn(5);
@@ -58,5 +58,17 @@ public class ComputerPlayerTest
 		
 		Mockito.verify(mockGame).remove("b", 3);
 	}
+	
+	@Test
+	public void MakeMove_shouldCallRemove3()
+	{
+		Mockito.when(mockGame.getHeapA()).thenReturn(1);
+		Mockito.when(mockGame.getHeapB()).thenReturn(5);
+		Mockito.when(mockGame.getHeapC()).thenReturn(7);
+		sut.MakeMove(mockGame);
+		
+		Mockito.verify(mockGame).remove("c", 3);
+	}
+
 
 }
