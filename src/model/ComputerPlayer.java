@@ -13,18 +13,22 @@ public class ComputerPlayer
 		int b=game.getHeapB();
 		int c=game.getHeapC();
 		
-		
-		
-		for(int counter=1;a-counter>=0;counter++)
-		{
-			if(((a-counter)^b^c)==0)
-			{
-				game.remove("a", counter);
-				break;
-			}
-		}
-		
+		game.remove("a", findZeroSumA(a, b, c));
+						
 		
 	}
+	
+	// finds the nimZeroSum 
+	private int findZeroSumA(int A, int b, int c)
+	{
+		for(int counter=1;(A-counter)>=0;counter++)
+		{
+			if(((A-counter)^b^c)==0)
+			{
+				return counter;
+			}
+		}
+		return -1;
+	}		
 
 }
