@@ -13,12 +13,26 @@ public class ComputerPlayer
 		int b=game.getHeapB();
 		int c=game.getHeapC();
 		
-		game.remove("a", findZeroSumA(a, b, c));
+		int numA=findZeroSumA(a,b,c);
+		int numB=findZeroSumA(b,c,a);
+		
+		if(numA>0)
+		{
+			game.remove("a", numA);
+			return;
+		}
+		
+		if(numB>0)
+		{
+			game.remove("b", numB);
+			return;
+		}
 						
 		
 	}
 	
 	// finds the nimZeroSum 
+	// is commutative, so it can be used for all zeroSums
 	private int findZeroSumA(int A, int b, int c)
 	{
 		for(int counter=1;(A-counter)>=0;counter++)
