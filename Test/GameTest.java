@@ -355,12 +355,32 @@ public class GameTest
 	}
 	
 	@Test
-	public void getLastNum_shouldReturnNum()
+	public void getLastNum_shouldReturnNum1()
 	{
 		model.Game sut=new model.Game(3, 5, 7);
 		sut.remove("a", 3);
 		int actual=sut.getLastNum();
 		int expected=3;
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void getLastNum_shouldReturnNum2()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("b", 2);
+		int actual=sut.getLastNum();
+		int expected=2;
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void getLastNum_shouldReturnNum3()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("c", 5);
+		int actual=sut.getLastNum();
+		int expected=5;
 		assertEquals(actual, expected);
 	}
 	
