@@ -36,7 +36,7 @@ public class ComputerPlayer
 			return;
 		}	
 		
-		// make loser move
+		// make loser move, maybe it should be random for a better game.
 		if(a>0)
 		{
 			game.remove("a", 1);
