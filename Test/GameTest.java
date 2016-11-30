@@ -88,8 +88,14 @@ public class GameTest
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
-	public void constructor_shouldThrowIllegalArgumentExeption()
+	public void constructor_shouldThrowIllegalArgumentExeption1()
 	{
 		model.Game sut=new model.Game(-1, 3, 5);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void constructor_shouldThrowIllegalArgumentExeption2()
+	{
+		model.Game sut=new model.Game(3, -1, 5);
 	}
 }
