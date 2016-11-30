@@ -34,7 +34,14 @@ public class ComputerPlayer
 		{
 			game.remove("c", numC);
 			return;
-		}		
+		}	
+		
+		// make loser move
+		if(a>0)
+		{
+			game.remove("a", 1);
+			return;
+		}
 		
 	}
 	
