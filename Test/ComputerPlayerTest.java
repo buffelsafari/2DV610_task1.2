@@ -41,8 +41,8 @@ public class ComputerPlayerTest
 	public void MakeMove_shouldCallRemove()
 	{
 		Mockito.when(mockGame.getHeapA()).thenReturn(3);
-		Mockito.when(mockGame.getHeapA()).thenReturn(5);
-		Mockito.when(mockGame.getHeapA()).thenReturn(7);
+		Mockito.when(mockGame.getHeapB()).thenReturn(5);
+		Mockito.when(mockGame.getHeapC()).thenReturn(7);
 		sut.MakeMove(mockGame);
 		
 		Mockito.verify(mockGame).remove("a", 1);

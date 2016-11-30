@@ -12,6 +12,19 @@ public class ComputerPlayer
 		int a=game.getHeapA();
 		int b=game.getHeapB();
 		int c=game.getHeapC();
+		
+		
+		
+		for(int counter=1;a-counter>=0;counter++)
+		{
+			if(((a-counter)^b^c)==0)
+			{
+				game.remove("a", counter);
+				break;
+			}
+		}
+		
+		
 	}
 
 }
