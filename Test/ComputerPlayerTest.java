@@ -22,5 +22,12 @@ public class ComputerPlayerTest
 		sut.MakeMove(mockGame);		
 		Mockito.verify(mockGame).getHeapA();
 	}
+	
+	@Test
+	public void ComputerPlayer_makeMove_shouldCallGetHeapB() 
+	{
+		sut.MakeMove(mockGame);		
+		Mockito.verify(mockGame).getHeapB();
+	}
 
 }
