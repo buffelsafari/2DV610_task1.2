@@ -14,7 +14,8 @@ public class GameTest
 		assertEquals(actual, expected);		
 	}
 	
-	@Test void constructor_shouldReturnNumberViaGetHeapB()
+	@Test 
+	public void constructor_shouldReturnNumberViaGetHeapB()
 	{
 		model.Game sut=new model.Game(3, 5, 7);
 		int actual=sut.getHeapB();

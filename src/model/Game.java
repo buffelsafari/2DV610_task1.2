@@ -7,10 +7,12 @@ package model;
 public class Game 
 {
 	private int heapA;
+	private int heapB;
 	// initierar dessa 3 högar med konstruktorn, negativa tal inte tillåtna.	
 	public Game(int heapA, int heapB, int heapC)
 	{
 		this.heapA=heapA;
+		this.heapB=heapB;
 	}
 
 	public int getHeapA()
@@ -20,6 +22,6 @@ public class Game
 	
 	public int getHeapB()
 	{
-		return 0;
+		return heapB;
 	}
 }
