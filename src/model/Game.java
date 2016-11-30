@@ -67,9 +67,10 @@ public class Game
 			return true;
 		}
 		
-		if(heap.equals("c"))
+		if(heap.equals("c") && num<=heapC)
 		{
 			heapC-=num;
+			return true;
 		}
 		
 		return false;
