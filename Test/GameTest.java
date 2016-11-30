@@ -234,7 +234,7 @@ public class GameTest
 	}
 	
 	@Test
-	public void remove_shouldReturnTrue()
+	public void remove_shouldReturnTrue1()
 	{
 		model.Game sut=new model.Game(3, 5, 7);
 		assertTrue(sut.remove("a",3));
@@ -245,5 +245,12 @@ public class GameTest
 	{
 		model.Game sut=new model.Game(3, 5, 7);
 		assertFalse(sut.remove("a",4));
+	}
+	
+	@Test
+	public void remove_shouldReturnTrue2()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		assertTrue(sut.remove("b",5));
 	}
 }
