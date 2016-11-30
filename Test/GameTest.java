@@ -104,4 +104,22 @@ public class GameTest
 	{
 		model.Game sut=new model.Game(3, 7, -1);
 	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void constructor_shouldThrowIllegalArgumentExeption4()
+	{
+		model.Game sut=new model.Game(-1, 3, -3);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void constructor_shouldThrowIllegalArgumentExeption5()
+	{
+		model.Game sut=new model.Game(3, -1, -2);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void constructor_shouldThrowIllegalArgumentExeption6()
+	{
+		model.Game sut=new model.Game(-5, -3, -1);
+	}
 }

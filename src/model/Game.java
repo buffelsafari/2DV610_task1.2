@@ -13,15 +13,11 @@ public class Game
 	public Game(int heapA, int heapB, int heapC)
 	{
 		// negative numbers not allowed
-		if(heapA<0 || heapB<0)
+		if(heapA<0 || heapB<0 || heapC<0)
 		{
 			throw new IllegalArgumentException();
 		}
-		if(heapC<0)
-		{
-			throw new IllegalArgumentException();
-		}
-						
+								
 		this.heapA=heapA;
 		this.heapB=heapB;
 		this.heapC=heapC;
