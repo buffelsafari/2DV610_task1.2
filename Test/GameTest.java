@@ -60,4 +60,9 @@ public class GameTest
 		assertEquals(actual, expected);
 	}
 	
+	@Test(expected=IllegalArgumentException.class)
+	public void constructor_shouldThrowIllegalArgumentExeption()
+	{
+		model.Game sut=new model.Game(-1, 3, 5);
+	}
 }
