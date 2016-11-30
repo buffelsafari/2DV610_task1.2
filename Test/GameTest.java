@@ -232,4 +232,11 @@ public class GameTest
 		int expected=7;
 		assertEquals(actual, expected);
 	}
+	
+	@Test
+	public void remove_shouldReturnTrue()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		assertTrue(sut.remove("a",3));
+	}
 }
