@@ -98,4 +98,10 @@ public class GameTest
 	{
 		model.Game sut=new model.Game(3, -1, 5);
 	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void constructor_shouldThrowIllegalArgumentExeption3()
+	{
+		model.Game sut=new model.Game(3, 7, -1);
+	}
 }

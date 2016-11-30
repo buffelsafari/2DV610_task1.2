@@ -17,7 +17,7 @@ public class Game
 		{
 			throw new IllegalArgumentException();
 		}
-				
+						
 		this.heapA=heapA;
 		this.heapB=heapB;
 		this.heapC=heapC;
