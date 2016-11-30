@@ -65,6 +65,11 @@ public class Game
 			heapB-=num;
 		}
 		
+		if(heap.equals("c"))
+		{
+			heapC-=num;
+		}
+		
 		return false;
 	}
 }
