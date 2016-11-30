@@ -8,7 +8,7 @@ public class Game
 {
 	private int heapA;
 	private int heapB;
-	// initierar dessa 3 högar med konstruktorn, negativa tal inte tillåtna.	
+		
 	public Game(int heapA, int heapB, int heapC)
 	{
 		this.heapA=heapA;
