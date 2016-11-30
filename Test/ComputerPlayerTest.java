@@ -38,7 +38,7 @@ public class ComputerPlayerTest
 	}
 	
 	@Test
-	public void MakeMove_shouldCallRemove()
+	public void MakeMove_shouldCallRemove1()
 	{
 		Mockito.when(mockGame.getHeapA()).thenReturn(3);
 		Mockito.when(mockGame.getHeapB()).thenReturn(5);
@@ -46,6 +46,17 @@ public class ComputerPlayerTest
 		sut.MakeMove(mockGame);
 		
 		Mockito.verify(mockGame).remove("a", 1);
+	}
+	
+	@Test
+	public void MakeMove_shouldCallRemove2()
+	{
+		Mockito.when(mockGame.getHeapA()).thenReturn(5);
+		Mockito.when(mockGame.getHeapB()).thenReturn(3);
+		Mockito.when(mockGame.getHeapC()).thenReturn(7);
+		sut.MakeMove(mockGame);
+		
+		Mockito.verify(mockGame).remove("b", 1);
 	}
 
 }
