@@ -12,6 +12,11 @@ public class Game
 		
 	public Game(int heapA, int heapB, int heapC)
 	{
+		if(heapA<0)
+		{
+			throw new IllegalArgumentException();
+		}
+		
 		this.heapA=heapA;
 		this.heapB=heapB;
 		this.heapC=heapC;

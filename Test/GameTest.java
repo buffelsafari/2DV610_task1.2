@@ -60,6 +60,33 @@ public class GameTest
 		assertEquals(actual, expected);
 	}
 	
+	@Test
+	public void constructor_shouldReturnNumberViaGetHeapA3() 
+	{
+		model.Game sut=new model.Game(0, 7, 3);
+		int actual=sut.getHeapA();
+		int expected=0;
+		assertEquals(actual, expected);		
+	}
+	
+	@Test 
+	public void constructor_shouldReturnNumberViaGetHeapB3()
+	{
+		model.Game sut=new model.Game(0, 0, 0);
+		int actual=sut.getHeapB();
+		int expected=0;
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void constructor_shouldReturnNumberViaGetHeapC3()
+	{
+		model.Game sut=new model.Game(0, 7, 0);
+		int actual=sut.getHeapC();
+		int expected=0;
+		assertEquals(actual, expected);
+	}
+	
 	@Test(expected=IllegalArgumentException.class)
 	public void constructor_shouldThrowIllegalArgumentExeption()
 	{
