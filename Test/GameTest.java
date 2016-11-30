@@ -203,4 +203,14 @@ public class GameTest
 		assertEquals(actual, expected);
 	}
 	
+	@Test
+	public void remove_shouldNotAlterTheBHeap()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("a", 1);
+		int actual=sut.getHeapB();
+		int expected=5;
+		assertEquals(actual, expected);
+	}
+	
 }
