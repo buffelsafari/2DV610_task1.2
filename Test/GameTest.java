@@ -213,4 +213,14 @@ public class GameTest
 		assertEquals(actual, expected);
 	}
 	
+	@Test
+	public void remove_shouldReturnHeapSizeViaGetHeapC()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("c", 1);
+		int actual=sut.getHeapC();
+		int expected=6;     // last git was wrong
+		assertEquals(actual, expected);
+	}
+	
 }
