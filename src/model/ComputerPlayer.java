@@ -6,7 +6,7 @@ public class ComputerPlayer
 	// Should try to make a winning move if possible
 	public void MakeMove(Game game)
 	{
-		
+		int a=game.getHeapA();
 	}
 
 }
