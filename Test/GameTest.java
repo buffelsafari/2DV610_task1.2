@@ -324,4 +324,14 @@ public class GameTest
 		assertFalse(sut.remove("c",0));
 	}
 	
+	@Test
+	public void getLastHeap_shouldReturnHeap()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("a", 1);
+		String actual=sut.getLastHeap();
+		String expected="a";
+		assertEquals(actual, expected);
+	}
+	
 }

@@ -79,4 +79,12 @@ public class Game
 		
 		return false;
 	}
+	
+	// should return the last heap argument in the remove method
+	// does not matter if the move was valid or not
+	public String getLastHeap()
+	{
+		
+		return null;
+	}
 }
