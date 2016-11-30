@@ -7,6 +7,7 @@ public class ComputerPlayer
 	public void MakeMove(Game game)
 	{
 		int a=game.getHeapA();
+		int b=game.getHeapB();
 	}
 
 }
