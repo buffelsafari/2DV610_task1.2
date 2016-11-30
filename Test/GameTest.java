@@ -198,8 +198,8 @@ public class GameTest
 	{
 		model.Game sut=new model.Game(3, 5, 7);
 		sut.remove("b", 1);
-		int actual=sut.getHeapA();
-		int expected=2;
+		int actual=sut.getHeapB();
+		int expected=4;     // last git was wrong
 		assertEquals(actual, expected);
 	}
 	

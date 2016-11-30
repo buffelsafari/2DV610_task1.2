@@ -59,6 +59,12 @@ public class Game
 		{
 			heapA-=num;
 		}
+		
+		if(heap.equals("b"))
+		{
+			heapB-=num;
+		}
+		
 		return false;
 	}
 }
