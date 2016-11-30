@@ -122,4 +122,11 @@ public class GameTest
 	{
 		model.Game sut=new model.Game(-5, -3, -1);
 	}
+	
+	@Test
+	public void isGameOver_viaConstructor_shouldReturnTrue()
+	{
+		model.Game sut=new model.Game(0, 0, 0);
+		assertTrue(sut.isGameOver());
+	}
 }

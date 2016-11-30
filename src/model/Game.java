@@ -37,4 +37,10 @@ public class Game
 	{
 		return heapC;
 	}
+	
+	// should be true if all heaps are empty
+	public boolean isGameOver()
+	{
+		return false;
+	}
 }
