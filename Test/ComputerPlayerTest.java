@@ -80,6 +80,17 @@ public class ComputerPlayerTest
 		
 		Mockito.verify(mockGame).remove(Mockito.anyString(), Mockito.anyInt());
 	}
+	
+	@Test
+	public void MakeMove_shouldCallRemove5()
+	{
+		Mockito.when(mockGame.getHeapA()).thenReturn(0);
+		Mockito.when(mockGame.getHeapB()).thenReturn(1);
+		Mockito.when(mockGame.getHeapC()).thenReturn(1);
+		sut.MakeMove(mockGame);
+		
+		Mockito.verify(mockGame).remove(Mockito.anyString(), Mockito.anyInt());
+	}
 
 
 }
