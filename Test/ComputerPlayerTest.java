@@ -1,18 +1,25 @@
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
 public class ComputerPlayerTest 
 {
-
+	private model.ComputerPlayer sut;
+	private model.Game mockGame;
+	
+	@Before
+	public void setup()
+	{
+		mockGame=Mockito.mock(model.Game.class);
+		sut=new model.ComputerPlayer();
+	}
+	
 	@Test
 	public void ComputerPlayer_makeMove_shouldCallGetHeapA() 
 	{
-		model.Game mockGame=Mockito.mock(model.Game.class);
-		model.ComputerPlayer sut=new model.ComputerPlayer();
-		sut.MakeMove(mockGame);
-		
+		sut.MakeMove(mockGame);		
 		Mockito.verify(mockGame).getHeapA();
 	}
 
