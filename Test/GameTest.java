@@ -223,4 +223,13 @@ public class GameTest
 		assertEquals(actual, expected);
 	}
 	
+	@Test
+	public void remove_shouldNotAlterTheCHeap()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("b", 1);
+		int actual=sut.getHeapC();
+		int expected=7;
+		assertEquals(actual, expected);
+	}
 }
