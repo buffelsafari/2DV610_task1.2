@@ -354,4 +354,15 @@ public class GameTest
 		assertEquals(actual, expected);
 	}
 	
+	@Test
+	public void getLastNum_shouldReturnNum()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("a", 3);
+		int actual=sut.getLastNum();
+		int expected=3;
+		assertEquals(actual, expected);
+	}
+	
+	
 }

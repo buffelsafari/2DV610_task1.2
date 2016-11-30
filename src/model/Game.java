@@ -89,4 +89,10 @@ public class Game
 	{		
 		return lastHeap;
 	}
+	
+	// should return the last removed num, analog to getLastHeap
+	public int getLastNum()
+	{
+		return 0; 
+	}
 }
