@@ -47,6 +47,7 @@ public class ComputerPlayer
 			game.remove("b", 1);
 			return;
 		}
+		// c>0 can never happen att this point, if a=b=c=0 then game over
 		
 	}
 	
