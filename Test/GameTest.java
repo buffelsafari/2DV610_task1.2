@@ -5,6 +5,9 @@ import org.junit.Test;
 public class GameTest 
 {
 
+	// 100% coverage of the Game.class
+	// all paths covered
+	
 	@Test
 	public void constructor_shouldReturnNumberViaGetHeapA1() 
 	{
