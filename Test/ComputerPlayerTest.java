@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
+// ComputerPlayer.class is 100 covered and all branches are covered
+
 public class ComputerPlayerTest 
 {
 	private model.ComputerPlayer sut;
