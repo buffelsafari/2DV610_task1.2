@@ -6,7 +6,7 @@ public class GameTest
 {
 
 	@Test
-	public void constructor_shouldReturnNumberViaGetHeapA() 
+	public void constructor_shouldReturnNumberViaGetHeapA1() 
 	{
 		model.Game sut=new model.Game(3, 5, 7);
 		int actual=sut.getHeapA();
@@ -15,7 +15,7 @@ public class GameTest
 	}
 	
 	@Test 
-	public void constructor_shouldReturnNumberViaGetHeapB()
+	public void constructor_shouldReturnNumberViaGetHeapB1()
 	{
 		model.Game sut=new model.Game(3, 5, 7);
 		int actual=sut.getHeapB();
@@ -24,12 +24,40 @@ public class GameTest
 	}
 	
 	@Test
-	public void constructor_shouldReturnNumberViaGetHeapC()
+	public void constructor_shouldReturnNumberViaGetHeapC1()
 	{
 		model.Game sut=new model.Game(3, 5, 7);
 		int actual=sut.getHeapC();
 		int expected=7;
 		assertEquals(actual, expected);
 	}
-
+	
+	// fler test med olika parametrar
+	@Test
+	public void constructor_shouldReturnNumberViaGetHeapA2() 
+	{
+		model.Game sut=new model.Game(5, 7, 3);
+		int actual=sut.getHeapA();
+		int expected=5;
+		assertEquals(actual, expected);		
+	}
+	
+	@Test 
+	public void constructor_shouldReturnNumberViaGetHeapB2()
+	{
+		model.Game sut=new model.Game(5, 7, 3);
+		int actual=sut.getHeapB();
+		int expected=7;
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void constructor_shouldReturnNumberViaGetHeapC2()
+	{
+		model.Game sut=new model.Game(5, 7, 3);
+		int actual=sut.getHeapC();
+		int expected=3;
+		assertEquals(actual, expected);
+	}
+	
 }
