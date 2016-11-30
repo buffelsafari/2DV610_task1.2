@@ -6,15 +6,15 @@ package model;
 
 public class Game 
 {
-	// initierar dessa 3 högar med konstruktorn, negativa tal inte tillåtna
-	
-	public Game(int a, int b, int c)
+	private int heapA;
+	// initierar dessa 3 högar med konstruktorn, negativa tal inte tillåtna	
+	public Game(int heapA, int heapB, int heapC)
 	{
-		
+		this.heapA=heapA;
 	}
 
 	public int getHeapA()
 	{
-		return 0;
+		return heapA;
 	}
 }
