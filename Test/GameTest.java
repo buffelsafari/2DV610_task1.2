@@ -174,12 +174,22 @@ public class GameTest
 	}
 	
 	@Test
-	public void remove_shouldReturnHeapSizeViaGetHeapA()
+	public void remove_shouldReturnHeapSizeViaGetHeapA1()
 	{
 		model.Game sut=new model.Game(3, 5, 7);
 		sut.remove("a", 1);
 		int actual=sut.getHeapA();
 		int expected=2;
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void remove_shouldReturnHeapSizeViaGetHeapA2()
+	{
+		model.Game sut=new model.Game(3, 5, 7);
+		sut.remove("b", 1);
+		int actual=sut.getHeapA();
+		int expected=3;
 		assertEquals(actual, expected);
 	}
 	
