@@ -11,6 +11,7 @@ public class Game
 	private int heapC;
 	
 	private String lastHeap;
+	private int lastNum;
 		
 	public Game(int heapA, int heapB, int heapC)
 	{
@@ -58,6 +59,7 @@ public class Game
 	public boolean remove(String heap, int num)
 	{
 		lastHeap=heap;
+		lastNum=num;
 		if(num<1)
 		{
 			return false;
@@ -93,6 +95,6 @@ public class Game
 	// should return the last removed num, analog to getLastHeap
 	public int getLastNum()
 	{
-		return 0; 
+		return lastNum; 
 	}
 }
