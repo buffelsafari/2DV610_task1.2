@@ -34,16 +34,14 @@ public class ConsoleViewTest
 	public void showWelcomeMessage_shouldOutputStringToPrintStream() 
 	{
 		sut.showWelcomeMessage();		
-		Mockito.verify(printStream).println(welcomeString);
-		
+		Mockito.verify(printStream).println(welcomeString);		
 	}
 	
 	@Test
 	public void showEndMessage_shouldOutputStringToPrintStream() 
 	{
 		sut.showEndMessage();		
-		Mockito.verify(printStream).println(endString);
-		
+		Mockito.verify(printStream).println(endString);		
 	}
 
 }
