@@ -197,7 +197,7 @@ public class ConsoleViewTest
 	@Test
 	public void input_shouldReturnFalse6()
 	{
-		inputStream=new ByteArrayInputStream("".getBytes());
+		inputStream=new ByteArrayInputStream("\n".getBytes());  // did not work with ""
 		sut=new view.ConsoleView(printStream, inputStream);
 		assertFalse(sut.input());
 	}	
