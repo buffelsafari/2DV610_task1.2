@@ -27,6 +27,7 @@ public class Controller
 			}			
 			computer.MakeMove(game);
 			
+			view.showYouLose();
 			// 	4. test for win(is game over)
 		
 		}
