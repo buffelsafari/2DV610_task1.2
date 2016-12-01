@@ -37,6 +37,6 @@ public class ConsoleView
 	// should show a win message
 	public void showYouWin()
 	{
-				
+		out.println("You win!");		
 	}
 }
