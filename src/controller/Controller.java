@@ -14,7 +14,6 @@ public class Controller
 		view.showWelcomeMessage();
 		view.showHeaps(game.getHeapA(), game.getHeapB(), game.getHeapC());
 		
-		// should start a game loop and loop until game.isGameOver
 		while(!game.isGameOver())
 		{
 			while(!(view.input() && game.remove(view.getHeap(), view.getNumber())))
@@ -24,6 +23,7 @@ public class Controller
 			view.showYouMove(game.getLastHeap(), game.getLastNum());
 			view.showHeaps(game.getHeapA(), game.getHeapB(), game.getHeapC());
 			
+			view.showYouWin();
 			//	2. test for win(is game over)
 			//  3. computerMove
 			// 	4. test for win(is game over)
