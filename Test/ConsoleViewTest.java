@@ -154,5 +154,13 @@ public class ConsoleViewTest
 		assertFalse(sut.input());
 	}
 	
+	@Test
+	public void input_shouldReturnFalse3()
+	{
+		inputStream=new ByteArrayInputStream("1a".getBytes());
+		sut=new view.ConsoleView(printStream, inputStream);
+		assertFalse(sut.input());
+	}
+	
 
 }
