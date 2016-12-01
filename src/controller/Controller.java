@@ -18,17 +18,17 @@ public class Controller
 		while(!game.isGameOver())
 		{
 				
-		// 	1. human player move
-		while(!(view.input() && game.remove(view.getHeap(), view.getNumber())))
-		{
-			view.showInputError();
-		}
-		view.showYouMove(game.getLastHeap(), game.getLastNum());
-		//		c. show heaps
-		
-		//	2. test for win(is game over)
-		//  3. computerMove
-		// 	4. test for win(is game over)
+			// 	1. human player move
+			while(!(view.input() && game.remove(view.getHeap(), view.getNumber())))
+			{
+				view.showInputError();
+			}
+			view.showYouMove(game.getLastHeap(), game.getLastNum());
+			//		c. show heaps
+			
+			//	2. test for win(is game over)
+			//  3. computerMove
+			// 	4. test for win(is game over)
 		
 		}
 				

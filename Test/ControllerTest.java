@@ -56,7 +56,7 @@ public class ControllerTest
 	}
 	
 	@Test
-	public void play_shouldcallInputError()
+	public void play_shouldcallInputError1()
 	{
 		Mockito.when(game.isGameOver()).thenReturn(false).thenReturn(true); 			// enter loop and exit the next test
 		Mockito.when(view.input()).thenReturn(false).thenReturn(true);  				// bad input+good input
@@ -74,4 +74,15 @@ public class ControllerTest
 		sut.play(game, view, computer);
 		Mockito.verify(view, Mockito.never()).showInputError();
 	}
+	
+	@Test
+	public void play_shouldcallInputError2()
+	{
+		Mockito.when(game.isGameOver()).thenReturn(false).thenReturn(true); 			// enter loop and exit the next test
+		Mockito.when(view.input()).thenReturn(true);  									//good input
+		Mockito.when(game.remove(view.getHeap(), view.getNumber())).thenReturn(false).thenReturn(true);  	// invalid+valid remove
+		sut.play(game, view, computer);
+		Mockito.verify(view, Mockito.times(1)).showInputError();
+	}
+	
 }
