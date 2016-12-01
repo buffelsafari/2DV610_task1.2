@@ -3,8 +3,6 @@ package view;
 import java.io.InputStream;
 import java.io.PrintStream;
 
-import org.mockito.Mockito;
-
 
 public class ConsoleView 
 {
@@ -15,7 +13,7 @@ public class ConsoleView
 		this.out=out;
 	}
 	
-	// should show a welcomemessage and instructions
+	// should show a welcome message and instructions
 	public void showWelcomeMessage()
 	{
 		out.println("Welcome to Dr. Nim's strategy game.\n"
