@@ -165,4 +165,14 @@ public class ControllerTest
 		Mockito.verify(view, Mockito.times(1)).showComputerMove(game.getLastHeap(), game.getLastNum());
 	}
 	
+	@Test
+	public void play_shouldCallshowHeaps()
+	{
+		Mockito.when(game.isGameOver()).thenReturn(false).thenReturn(false).thenReturn(true);// enter loop and exit the next test
+		Mockito.when(view.input()).thenReturn(true);  									// good input
+		Mockito.when(game.remove(view.getHeap(), view.getNumber())).thenReturn(true);  	// valid remove
+		sut.play(game, view, computer);
+		Mockito.verify(view, Mockito.times(3)).showHeaps(game.getHeapA(), game.getHeapB(), game.getHeapC());
+	}
+	
 }
