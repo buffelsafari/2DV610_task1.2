@@ -28,4 +28,12 @@ public class ControllerTest
 		sut.play(game, view, computer);
 		Mockito.verify(view, Mockito.times(1)).showWelcomeMessage();		
 	}
+	
+	@Test
+	public void play_shouldcallShowHeaps() 
+	{
+		Mockito.when(game.isGameOver()).thenReturn(true);  // else we get stuck in a loop later
+		sut.play(game, view, computer);
+		Mockito.verify(view, Mockito.times(1)).showHeaps(game.getHeapA(), game.getHeapB(), game.getHeapC());		
+	}
 }
