@@ -29,8 +29,7 @@ public class ConsoleViewTest
 		printStream=Mockito.mock(PrintStream.class);
 		inputStream=Mockito.mock(InputStream.class);		
 		sut=new view.ConsoleView(printStream, inputStream);
-	}
-	
+	}	
 	
 	@Test
 	public void showWelcomeMessage_shouldOutputStringToPrintStream() 
