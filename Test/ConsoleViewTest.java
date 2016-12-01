@@ -22,9 +22,9 @@ public class ConsoleViewTest
 	private final static String endString="Thank you for playing.";	
 	private final static String heapHeadString="heaps\tA\tB\tC\n";
 	private final static String winString="You win!";
-	private final static String loseString="You lose!";
-	
+	private final static String loseString="You lose!";	
 	private final static String nimRemoved1="\nDr. Nim removed 3 sticks from heap A";
+	private final static String nimRemoved2="\nDr. Nim removed 7 sticks from heap B";
 		
 	@Before
 	public void setup()
@@ -84,10 +84,17 @@ public class ConsoleViewTest
 	}
 	
 	@Test
-	public void showComputerMove_shouldOutputStringToPrintStream()
+	public void showComputerMove_shouldOutputStringToPrintStream1()
 	{
 		sut.showComputerMove("a", 3);
 		Mockito.verify(printStream).println(nimRemoved1);
+	}
+	
+	@Test
+	public void showComputerMove_shouldOutputStringToPrintStream2()
+	{
+		sut.showComputerMove("b", 7);
+		Mockito.verify(printStream).println(nimRemoved2);
 	}
 	
 
