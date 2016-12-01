@@ -97,4 +97,10 @@ public class ConsoleView
 		return true;		
 		
 	}
+	
+	// should return a string with the heap choosen in input 'a' || 'b' || 'c'
+	public String getHeap() 
+	{
+		return "";
+	}
 }

@@ -217,5 +217,15 @@ public class ConsoleViewTest
 		sut=new view.ConsoleView(printStream, inputStream);
 		assertTrue(sut.input());
 	}
+	
+	@Test
+	public void getHeap_shouldReturnAString()
+	{
+		inputStream=new ByteArrayInputStream("a1".getBytes());
+		sut=new view.ConsoleView(printStream, inputStream);
+		String actual=sut.getHeap();
+		String expected="a";
+		assertEquals(actual, expected);
+	}
 
 }
