@@ -24,9 +24,9 @@ public class ConsoleViewTest
 	private final static String winString="You win!";
 	private final static String loseString="You lose!";	
 	private final static String nimRemoved1="\nDr. Nim removed 3 sticks from heap A";
-	private final static String nimRemoved2="\nDr. Nim removed 7 sticks from heap B";
-	
+	private final static String nimRemoved2="\nDr. Nim removed 7 sticks from heap B";	
 	private final static String youRemoved1="You removed 1 sticks from heap C";
+	private final static String youRemoved2="You removed 3 sticks from heap A";
 		
 	@Before
 	public void setup()
@@ -100,10 +100,17 @@ public class ConsoleViewTest
 	}
 	
 	@Test
-	public void showYouMove_shouldOutputStringToPrintStream()
+	public void showYouMove_shouldOutputStringToPrintStream1()
 	{
 		sut.showYouMove("c", 1);
 		Mockito.verify(printStream).println(youRemoved1);
+	}
+	
+	@Test
+	public void showYouMove_shouldOutputStringToPrintStream2()
+	{
+		sut.showYouMove("a", 3);
+		Mockito.verify(printStream).println(youRemoved2);
 	}
 	
 
