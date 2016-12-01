@@ -25,6 +25,7 @@ public class Controller
 			if(game.isGameOver())
 			{
 				view.showYouWin();
+				break;
 			}			
 			computer.MakeMove(game);
 			
