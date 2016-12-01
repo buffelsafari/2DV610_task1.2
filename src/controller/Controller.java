@@ -25,7 +25,7 @@ public class Controller
 			}			
 			computer.MakeMove(game);
 			view.showComputerMove(game.getLastHeap(), game.getLastNum());
-			// forgot the show move
+			
 			// and show heap
 			if(game.isGameOver())
 			{
