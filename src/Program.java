@@ -3,6 +3,9 @@ import model.ComputerPlayer;
 import model.Game;
 import view.ConsoleView;
 
+// this class have no unit test
+// so i made it as simple as possible 
+
 public class Program 
 {
 	public static void main(String[] arg)
