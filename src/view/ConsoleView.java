@@ -54,6 +54,6 @@ public class ConsoleView
 	// should show info about the human move
 	public void showYouMove(String heap, int n) 
 	{
-				
+		out.println("You removed "+n+" sticks from heap "+heap.toUpperCase());		
 	}
 }
