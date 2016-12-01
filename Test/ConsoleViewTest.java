@@ -170,6 +170,14 @@ public class ConsoleViewTest
 		assertTrue(sut.input());
 	}
 	
+	@Test
+	public void input_shouldReturnTrue5()
+	{
+		inputStream=new ByteArrayInputStream("C3".getBytes());
+		sut=new view.ConsoleView(printStream, inputStream);
+		assertTrue(sut.input());
+	}
+	
 	
 	
 
