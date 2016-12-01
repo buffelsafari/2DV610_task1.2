@@ -78,7 +78,7 @@ public class ConsoleView
 		}
 		
 		
-		String num=str.substring(1);
+		String num=str.substring(1).trim();
 		
 		int i=-1;
 		try
