@@ -3,7 +3,6 @@ package view;
 import java.io.InputStream;
 import java.io.PrintStream;
 
-
 public class ConsoleView 
 {
 	PrintStream out;
