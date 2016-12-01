@@ -9,9 +9,9 @@ public class Controller
 {
 
 	// starts the game
-	public boolean play(Game game, ConsoleView view, ComputerPlayer computer)
+	public void play(Game game, ConsoleView view, ComputerPlayer computer)
 	{
-		// should show welcome message
+		view.showWelcomeMessage();
 		// show heaps
 		
 		// should start a gameloop and loop until game.isGameOver
@@ -23,8 +23,7 @@ public class Controller
 		// 	4. test for win(is game over)
 		
 		// }
+				
 		
-		
-		return false;
 	}
 }
