@@ -71,6 +71,29 @@ public class ConsoleView
 		{
 			return false;
 		}
+		
+		
+		String num=str.substring(1);
+		
+		int i=-1;
+		try
+		{
+			i = Integer.parseInt(num);
+		}
+		catch (NumberFormatException e) 
+		{
+			return false;
+		}
+		
+					
+		
+		
+		
+		
+		
+		
 		return true;
+		
+		
 	}
 }
