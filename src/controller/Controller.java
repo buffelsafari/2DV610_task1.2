@@ -22,9 +22,11 @@ public class Controller
 			}
 			view.showYouMove(game.getLastHeap(), game.getLastNum());
 			view.showHeaps(game.getHeapA(), game.getHeapB(), game.getHeapC());
+			if(game.isGameOver())
+			{
+				view.showYouWin();
+			}
 			
-			view.showYouWin();
-			//	2. test for win(is game over)
 			//  3. computerMove
 			// 	4. test for win(is game over)
 		
