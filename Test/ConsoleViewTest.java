@@ -46,10 +46,17 @@ public class ConsoleViewTest
 	}
 	
 	@Test
-	public void showHeaps_shouldOutputStringToPrintStream()
+	public void showHeaps_shouldOutputStringToPrintStream1()
 	{
 		sut.showHeaps(3, 5, 7);
 		Mockito.verify(printStream).println(heapHeadString+"     \t3\t5\t7");
+	}
+	
+	@Test
+	public void showHeaps_shouldOutputStringToPrintStream2()
+	{
+		sut.showHeaps(1, 7, 3);
+		Mockito.verify(printStream).println(heapHeadString+"     \t1\t7\t3");
 	}
 
 }
