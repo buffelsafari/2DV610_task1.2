@@ -21,6 +21,7 @@ public class ConsoleViewTest
 			+"type a1 to remove 1 stick from heap A...\n";
 	private final static String endString="Thank you for playing.";	
 	private final static String heapHeadString="heaps\tA\tB\tC\n";
+	private final static String winString="You win!";
 		
 	@Before
 	public void setup()
@@ -64,6 +65,13 @@ public class ConsoleViewTest
 	{
 		sut.showHeaps(1, 0, 5);
 		Mockito.verify(printStream).println(heapHeadString+"     \t1\t0\t5");
+	}
+	
+	@Test
+	public void showYouWin_shouldOutputStringToPrintStream()
+	{
+		sut.showYouWin();
+		Mockito.verify(printStream).println(winString);
 	}
 
 }

@@ -33,4 +33,10 @@ public class ConsoleView
 	{
 		out.println("heaps\tA\tB\tC\n     \t"+a+"\t"+b+"\t"+c);		
 	}
+	
+	// should show a win message
+	public void showYouWin()
+	{
+				
+	}
 }
