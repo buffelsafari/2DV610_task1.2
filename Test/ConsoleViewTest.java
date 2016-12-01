@@ -115,11 +115,35 @@ public class ConsoleViewTest
 	}
 	
 	@Test
-	public void input_shouldReturnTrue()
+	public void input_shouldReturnTrue1()
 	{
 		inputStream=new ByteArrayInputStream("a1".getBytes());
 		sut=new view.ConsoleView(printStream, inputStream);
 		assertTrue(sut.input());
+	}
+	
+	@Test
+	public void input_shouldReturnTrue2()
+	{
+		inputStream=new ByteArrayInputStream("b1".getBytes());
+		sut=new view.ConsoleView(printStream, inputStream);
+		assertTrue(sut.input());
+	}
+	
+	@Test
+	public void input_shouldReturnTrue3()
+	{
+		inputStream=new ByteArrayInputStream("c1".getBytes());
+		sut=new view.ConsoleView(printStream, inputStream);
+		assertTrue(sut.input());
+	}
+	
+	@Test
+	public void input_shouldReturnFalse()
+	{
+		inputStream=new ByteArrayInputStream("d1".getBytes());
+		sut=new view.ConsoleView(printStream, inputStream);
+		assertFalse(sut.input());
 	}
 	
 

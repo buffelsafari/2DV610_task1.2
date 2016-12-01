@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class ConsoleView 
 {
-	PrintStream out;
-	Scanner scanner;
+	private PrintStream out;
+	private Scanner scanner;
+	
 	// should display stuff on the console and get inputs from keyboard
 	public ConsoleView(PrintStream out, InputStream in)
 	{
