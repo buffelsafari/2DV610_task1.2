@@ -85,8 +85,10 @@ public class ConsoleView
 			return false;
 		}
 		
-					
-		
+		if(i<1)
+		{
+			return false;
+		}		
 		
 		
 		
