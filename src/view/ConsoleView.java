@@ -31,6 +31,6 @@ public class ConsoleView
 	// should show information about the heaps
 	public void showHeaps(int a, int b, int c) 
 	{
-		out.println("heaps\tA\tB\tC\n     \t3\t5\t7");		
+		out.println("heaps\tA\tB\tC\n     \t"+a+"\t"+b+"\t"+c);		
 	}
 }
