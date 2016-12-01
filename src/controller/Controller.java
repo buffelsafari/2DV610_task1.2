@@ -15,7 +15,7 @@ public class Controller
 		view.showHeaps(game.getHeapA(), game.getHeapB(), game.getHeapC());
 		
 		// should start a gameloop and loop until game.isGameOver
-		while(game.isGameOver())
+		while(!game.isGameOver())
 		{
 				
 		// 	1. human player move
