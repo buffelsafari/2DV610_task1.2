@@ -9,6 +9,7 @@ public class ConsoleView
 	private PrintStream out;
 	private Scanner scanner;
 	private String heapInput;
+	private int numberInput;
 	
 	// should display stuff on the console and get inputs from keyboard
 	public ConsoleView(PrintStream out, InputStream in)
@@ -93,7 +94,8 @@ public class ConsoleView
 		if(i<1)
 		{
 			return false;
-		}		
+		}
+		numberInput=i;
 		
 		return true;		
 		
@@ -108,6 +110,6 @@ public class ConsoleView
 	// should return a number choosen in the last input
 	public int getNumber() 
 	{
-		return 0;
+		return numberInput;
 	}
 }
