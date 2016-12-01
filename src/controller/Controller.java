@@ -1,9 +1,7 @@
 package controller;
-
 import model.ComputerPlayer;
 import model.Game;
 import view.ConsoleView;
-
 
 public class Controller 
 {
