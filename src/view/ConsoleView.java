@@ -48,6 +48,6 @@ public class ConsoleView
 	// should show info about the computer move
 	public void showComputerMove(String heap, int n)
 	{
-				
+		out.println("\nDr. Nim removed "+n+" sticks from heap "+heap.toUpperCase());			
 	}
 }
