@@ -22,6 +22,7 @@ public class ConsoleViewTest
 	private final static String endString="Thank you for playing.";	
 	private final static String heapHeadString="heaps\tA\tB\tC\n";
 	private final static String winString="You win!";
+	private final static String loseString="You lose!";
 		
 	@Before
 	public void setup()
@@ -72,5 +73,14 @@ public class ConsoleViewTest
 		sut.showYouWin();
 		Mockito.verify(printStream).println(winString);
 	}
+	
+	@Test
+	public void showYouLose_shouldOutputStringToPrintStream()
+	{
+		sut.showYouLose();
+		Mockito.verify(printStream).println(loseString);
+	}
+	
+	
 
 }

@@ -39,4 +39,10 @@ public class ConsoleView
 	{
 		out.println("You win!");		
 	}
+	
+	// should show a lose message
+	public void showYouLose() 
+	{
+				
+	}
 }
