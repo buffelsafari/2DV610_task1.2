@@ -24,6 +24,6 @@ public class Controller
 		
 		// }
 				
-		// should show bye message
+		view.showEndMessage();
 	}
 }
