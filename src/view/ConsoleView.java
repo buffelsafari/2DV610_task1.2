@@ -44,4 +44,10 @@ public class ConsoleView
 	{
 		out.println("You lose!");		
 	}
+	
+	// should show info about the computer move
+	public void showComputerMove(String heap, int n)
+	{
+				
+	}
 }

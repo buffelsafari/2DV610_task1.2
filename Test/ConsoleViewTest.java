@@ -23,6 +23,8 @@ public class ConsoleViewTest
 	private final static String heapHeadString="heaps\tA\tB\tC\n";
 	private final static String winString="You win!";
 	private final static String loseString="You lose!";
+	
+	private final static String nimRemoved1="\nDr. Nim removed 3 sticks from heap A";
 		
 	@Before
 	public void setup()
@@ -81,6 +83,12 @@ public class ConsoleViewTest
 		Mockito.verify(printStream).println(loseString);
 	}
 	
+	@Test
+	public void showComputerMove_shouldOutputStringToPrintStream()
+	{
+		sut.showComputerMove("a", 3);
+		Mockito.verify(printStream).println(nimRemoved1);
+	}
 	
 
 }
