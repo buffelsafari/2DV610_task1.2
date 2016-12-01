@@ -12,7 +12,7 @@ public class Controller
 	public void play(Game game, ConsoleView view, ComputerPlayer computer)
 	{
 		view.showWelcomeMessage();
-		// show heaps
+		view.showHeaps(game.getHeapA(), game.getHeapB(), game.getHeapC());
 		
 		// should start a gameloop and loop until game.isGameOver
 		// {
