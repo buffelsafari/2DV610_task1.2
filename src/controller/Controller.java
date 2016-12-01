@@ -24,7 +24,8 @@ public class Controller
 				break;
 			}			
 			computer.MakeMove(game);
-			
+			// forgot the show move
+			// and show heap
 			if(game.isGameOver())
 			{
 				view.showYouLose();

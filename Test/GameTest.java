@@ -1,10 +1,8 @@
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class GameTest 
 {
-
 	// 100% coverage of the Game.class
 	// all paths covered
 	

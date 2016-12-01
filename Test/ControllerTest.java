@@ -1,8 +1,8 @@
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+
+// 100% coverage and all branches covered
 
 public class ControllerTest 
 {
@@ -153,6 +153,16 @@ public class ControllerTest
 		Mockito.when(game.remove(view.getHeap(), view.getNumber())).thenReturn(true);  	// valid remove
 		sut.play(game, view, computer);
 		Mockito.verify(view, Mockito.never()).showYouLose();
+	}
+	
+	@Test
+	public void play_shouldCallshowComputerMove()
+	{
+		Mockito.when(game.isGameOver()).thenReturn(false).thenReturn(false).thenReturn(true);// enter loop and exit the next test
+		Mockito.when(view.input()).thenReturn(true);  									// good input
+		Mockito.when(game.remove(view.getHeap(), view.getNumber())).thenReturn(true);  	// valid remove
+		sut.play(game, view, computer);
+		Mockito.verify(view, Mockito.times(1)).showComputerMove(game.getLastHeap(), game.getLastNum());
 	}
 	
 }
