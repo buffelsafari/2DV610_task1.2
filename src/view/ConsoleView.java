@@ -2,14 +2,17 @@ package view;
 
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
 
 public class ConsoleView 
 {
 	PrintStream out;
+	Scanner scanner;
 	// should display stuff on the console and get inputs from keyboard
 	public ConsoleView(PrintStream out, InputStream in)
 	{
 		this.out=out;
+		scanner=new Scanner(in);
 	}
 	
 	// should show a welcome message and instructions
@@ -61,6 +64,12 @@ public class ConsoleView
 	// the heap string and the num int should be available to read from separate methods after 
 	public boolean input() 
 	{
-		return false;
+		String str=scanner.nextLine();
+		String heapInput=str.substring(0, 1);
+		if(!(heapInput.equals("a") || heapInput.equals("b") || heapInput.equals("c")))
+		{
+			return false;
+		}
+		return true;
 	}
 }
