@@ -25,6 +25,6 @@ public class ConsoleView
 	// should show a bye message
 	public void showEndMessage()
 	{
-			
+		out.println("Thank you for playing.");
 	}
 }
