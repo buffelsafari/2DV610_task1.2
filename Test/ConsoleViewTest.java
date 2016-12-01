@@ -20,7 +20,7 @@ public class ConsoleViewTest
 			+"The player who picks the last stick win.\n"
 			+"type a1 to remove 1 stick from heap A...\n";
 	private final static String endString="Thank you for playing.";	
-	private final static String heapHeadString="heaps\tA\tB\tC";
+	private final static String heapHeadString="heaps\tA\tB\tC\n";
 		
 	@Before
 	public void setup()
