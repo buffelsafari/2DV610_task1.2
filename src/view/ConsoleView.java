@@ -8,7 +8,7 @@ public class ConsoleView
 {
 	private PrintStream out;
 	private Scanner scanner;
-	String heapInput;
+	private String heapInput;
 	
 	// should display stuff on the console and get inputs from keyboard
 	public ConsoleView(PrintStream out, InputStream in)
