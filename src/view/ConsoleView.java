@@ -21,4 +21,10 @@ public class ConsoleView
 				+"The player who picks the last stick win.\n"
 				+"type a1 to remove 1 stick from heap A...\n");
 	}
+	
+	// should show a bye message
+	public void showEndMessage()
+	{
+			
+	}
 }

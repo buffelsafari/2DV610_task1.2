@@ -19,6 +19,7 @@ public class ConsoleViewTest
 			+"Pick any number of sticks from one of the heaps.\n"
 			+"The player who picks the last stick win.\n"
 			+"type a1 to remove 1 stick from heap A...\n";
+	private final static String endString="Thank you for playing.";
 	
 	@Before
 	public void setup()
@@ -30,10 +31,18 @@ public class ConsoleViewTest
 	
 	
 	@Test
-	public void test() 
+	public void showWelcomeMessage_shouldOutputStringToPrintStream() 
 	{
 		sut.showWelcomeMessage();		
 		Mockito.verify(printStream).println(welcomeString);
+		
+	}
+	
+	@Test
+	public void showEndMessage_shouldOutputStringToPrintStream() 
+	{
+		sut.showEndMessage();		
+		Mockito.verify(printStream).println(endString);
 		
 	}
 
