@@ -56,4 +56,11 @@ public class ConsoleView
 	{
 		out.println("You removed "+n+" sticks from heap "+heap.toUpperCase());		
 	}
+	
+	// take a input from the keyboard, should return true if input is valid
+	// the heap string and the num int should be available to read from separate methods after 
+	public boolean input() 
+	{
+		return false;
+	}
 }

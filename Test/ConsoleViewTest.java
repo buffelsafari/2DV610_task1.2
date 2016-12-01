@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 
@@ -111,6 +112,14 @@ public class ConsoleViewTest
 	{
 		sut.showYouMove("a", 3);
 		Mockito.verify(printStream).println(youRemoved2);
+	}
+	
+	@Test
+	public void input_shouldReturnTrue()
+	{
+		inputStream=new ByteArrayInputStream("a1".getBytes());
+		sut=new view.ConsoleView(printStream, inputStream);
+		assertTrue(sut.input());
 	}
 	
 
