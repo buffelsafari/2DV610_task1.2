@@ -50,4 +50,10 @@ public class ConsoleView
 	{
 		out.println("\nDr. Nim removed "+n+" sticks from heap "+heap.toUpperCase());			
 	}
+	
+	// should show info about the human move
+	public void showYouMove(String heap, int n) 
+	{
+				
+	}
 }

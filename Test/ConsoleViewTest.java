@@ -25,6 +25,8 @@ public class ConsoleViewTest
 	private final static String loseString="You lose!";	
 	private final static String nimRemoved1="\nDr. Nim removed 3 sticks from heap A";
 	private final static String nimRemoved2="\nDr. Nim removed 7 sticks from heap B";
+	
+	private final static String youRemoved1="You removed 1 sticks from heap C";
 		
 	@Before
 	public void setup()
@@ -95,6 +97,13 @@ public class ConsoleViewTest
 	{
 		sut.showComputerMove("b", 7);
 		Mockito.verify(printStream).println(nimRemoved2);
+	}
+	
+	@Test
+	public void showYouMove_shouldOutputStringToPrintStream()
+	{
+		sut.showYouMove("c", 1);
+		Mockito.verify(printStream).println(youRemoved1);
 	}
 	
 
