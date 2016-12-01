@@ -65,7 +65,7 @@ public class ConsoleView
 	// the heap string and the num int should be available to read from separate methods after 
 	public boolean input() 
 	{
-		String str=scanner.nextLine();
+		String str=scanner.nextLine().toLowerCase();
 		String heapInput=str.substring(0, 1);
 		if(!(heapInput.equals("a") || heapInput.equals("b") || heapInput.equals("c")))
 		{
