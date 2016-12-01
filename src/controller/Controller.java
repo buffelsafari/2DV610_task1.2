@@ -17,8 +17,6 @@ public class Controller
 		// should start a game loop and loop until game.isGameOver
 		while(!game.isGameOver())
 		{
-				
-			// 	1. human player move
 			while(!(view.input() && game.remove(view.getHeap(), view.getNumber())))
 			{
 				view.showInputError();
