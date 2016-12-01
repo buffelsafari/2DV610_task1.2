@@ -75,8 +75,7 @@ public class ConsoleView
 		if(!(heapInput.equals("a") || heapInput.equals("b") || heapInput.equals("c")))
 		{
 			return false;
-		}
-		
+		}		
 		
 		String num=str.substring(1).trim();
 		
@@ -95,12 +94,7 @@ public class ConsoleView
 			return false;
 		}		
 		
-		
-		
-		
-		
-		return true;
-		
+		return true;		
 		
 	}
 }
