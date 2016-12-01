@@ -43,6 +43,6 @@ public class ConsoleView
 	// should show a lose message
 	public void showYouLose() 
 	{
-				
+		out.println("You lose!");		
 	}
 }
