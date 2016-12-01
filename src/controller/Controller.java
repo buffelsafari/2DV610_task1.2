@@ -20,6 +20,8 @@ public class Controller
 				
 		// 	1. human player move
 		//		a. input- loop until good input
+			view.showInputError();
+			
 			view.showYouMove(game.getLastHeap(), game.getLastNum());
 		//		c. show heaps
 		
