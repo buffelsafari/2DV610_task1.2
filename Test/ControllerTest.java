@@ -125,4 +125,14 @@ public class ControllerTest
 		Mockito.verify(computer, Mockito.times(1)).MakeMove(game);
 	}
 	
+	@Test
+	public void play_shouldNotCallShowYouWin()
+	{
+		Mockito.when(game.isGameOver()).thenReturn(false).thenReturn(true);// enter loop and exit the next test
+		Mockito.when(view.input()).thenReturn(true);  									// good input
+		Mockito.when(game.remove(view.getHeap(), view.getNumber())).thenReturn(true);  	// valid remove
+		sut.play(game, view, computer);
+		Mockito.verify(computer, Mockito.never()).MakeMove(game);
+	}
+	
 }
