@@ -25,8 +25,7 @@ public class Controller
 			if(game.isGameOver())
 			{
 				view.showYouWin();
-			}
-			
+			}			
 			computer.MakeMove(game);
 			
 			// 	4. test for win(is game over)
