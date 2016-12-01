@@ -19,10 +19,11 @@ public class Controller
 		{
 				
 		// 	1. human player move
-		//		a. input- loop until good input
+		while(!(view.input() && game.remove(view.getHeap(), view.getNumber())))
+		{
 			view.showInputError();
-			
-			view.showYouMove(game.getLastHeap(), game.getLastNum());
+		}
+		view.showYouMove(game.getLastHeap(), game.getLastNum());
 		//		c. show heaps
 		
 		//	2. test for win(is game over)
