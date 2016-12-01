@@ -251,4 +251,15 @@ public class ConsoleViewTest
 		assertEquals(actual, expected);
 	}
 
+	@Test
+	public void getHeap_shouldReturnANumber()
+	{
+		inputStream=new ByteArrayInputStream("a1".getBytes());
+		sut=new view.ConsoleView(printStream, inputStream);
+		sut.input();  // forgot this
+		int actual=sut.getNumber();
+		int expected=1;
+		assertEquals(actual, expected);
+	}
+	
 }

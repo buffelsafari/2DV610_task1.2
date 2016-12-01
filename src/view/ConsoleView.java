@@ -104,4 +104,10 @@ public class ConsoleView
 	{
 		return heapInput;
 	}
+	
+	// should return a number choosen in the last input
+	public int getNumber() 
+	{
+		return 0;
+	}
 }
