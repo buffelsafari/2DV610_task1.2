@@ -7,8 +7,6 @@ import view.ConsoleView;
 
 public class Controller 
 {
-
-	// starts the game
 	public void play(Game game, ConsoleView view, ComputerPlayer computer)
 	{
 		view.showWelcomeMessage();
