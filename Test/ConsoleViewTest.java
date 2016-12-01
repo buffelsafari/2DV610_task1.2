@@ -28,6 +28,7 @@ public class ConsoleViewTest
 	private final static String nimRemoved2="\nDr. Nim removed 7 sticks from heap B";	
 	private final static String youRemoved1="You removed 1 sticks from heap C";
 	private final static String youRemoved2="You removed 3 sticks from heap A";
+	private final static String inputError="Input error!";
 		
 	@Before
 	public void setup()
@@ -282,6 +283,13 @@ public class ConsoleViewTest
 		int actual=sut.getNumber();
 		int expected=5;
 		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void showInputError_shouldoutputAStringtoPrintStream()
+	{
+		sut.showInputError();
+		Mockito.verify(printStream).println(inputError);
 	}
 	
 }

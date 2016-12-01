@@ -112,4 +112,9 @@ public class ConsoleView
 	{
 		return numberInput;
 	}
+	
+	public void showInputError()
+	{
+		
+	}
 }
