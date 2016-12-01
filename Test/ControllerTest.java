@@ -54,4 +54,14 @@ public class ControllerTest
 		sut.play(game, view, computer);
 		Mockito.verify(view, Mockito.times(1)).showYouMove(game.getLastHeap(), game.getLastNum());
 	}
+	
+	@Test
+	public void play_shouldcallInputError()
+	{
+		Mockito.when(game.isGameOver()).thenReturn(false).thenReturn(true); 			// enter loop and exit the next test
+		Mockito.when(view.input()).thenReturn(false).thenReturn(true);  				// bad input+good input
+		Mockito.when(game.remove(view.getHeap(), view.getNumber())).thenReturn(true);  	// valid remove
+		sut.play(game, view, computer);
+		Mockito.verify(view, Mockito.times(1)).showInputError();
+	}
 }
