@@ -14,7 +14,7 @@ public class Controller
 		view.showWelcomeMessage();
 		view.showHeaps(game.getHeapA(), game.getHeapB(), game.getHeapC());
 		
-		// should start a gameloop and loop until game.isGameOver
+		// should start a game loop and loop until game.isGameOver
 		while(!game.isGameOver())
 		{
 				
