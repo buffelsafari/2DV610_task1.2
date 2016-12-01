@@ -28,11 +28,8 @@ public class Controller
 			if(game.isGameOver())
 			{
 				view.showYouLose();
-			}
-			// 	4. test for win(is game over)
-		
-		}
-				
+			}			
+		}				
 		view.showEndMessage();
 	}
 }
