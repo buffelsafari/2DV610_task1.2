@@ -27,4 +27,11 @@ public class ConsoleView
 	{
 		out.println("Thank you for playing.");
 	}
+	
+	// should show information about the heaps
+	public void showHeaps(int a, int b, int c) 
+	{
+		
+		
+	}
 }

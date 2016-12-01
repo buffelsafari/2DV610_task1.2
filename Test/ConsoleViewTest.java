@@ -19,8 +19,9 @@ public class ConsoleViewTest
 			+"Pick any number of sticks from one of the heaps.\n"
 			+"The player who picks the last stick win.\n"
 			+"type a1 to remove 1 stick from heap A...\n";
-	private final static String endString="Thank you for playing.";
-	
+	private final static String endString="Thank you for playing.";	
+	private final static String heapHeadString="heaps\tA\tB\tC";
+		
 	@Before
 	public void setup()
 	{
@@ -42,6 +43,13 @@ public class ConsoleViewTest
 	{
 		sut.showEndMessage();		
 		Mockito.verify(printStream).println(endString);		
+	}
+	
+	@Test
+	public void showHeaps_shouldOutputStringToPrintStream()
+	{
+		sut.showHeaps(3, 5, 7);
+		Mockito.verify(printStream).println(heapHeadString+"     \t3\t5\t7");
 	}
 
 }
