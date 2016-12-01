@@ -24,7 +24,7 @@ public class Controller
 				view.showInputError();
 			}
 			view.showYouMove(game.getLastHeap(), game.getLastNum());
-			//		c. show heaps
+			view.showHeaps(game.getHeapA(), game.getHeapB(), game.getHeapC());
 			
 			//	2. test for win(is game over)
 			//  3. computerMove
