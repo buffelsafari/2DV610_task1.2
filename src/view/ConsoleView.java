@@ -115,6 +115,6 @@ public class ConsoleView
 	
 	public void showInputError()
 	{
-		
+		out.println("Input error!");
 	}
 }
