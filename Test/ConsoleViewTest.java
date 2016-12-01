@@ -252,13 +252,35 @@ public class ConsoleViewTest
 	}
 
 	@Test
-	public void getHeap_shouldReturnANumber()
+	public void getHeap_shouldReturnANumber1()
 	{
 		inputStream=new ByteArrayInputStream("a1".getBytes());
 		sut=new view.ConsoleView(printStream, inputStream);
 		sut.input();  // forgot this
 		int actual=sut.getNumber();
 		int expected=1;
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void getHeap_shouldReturnANumber2()
+	{
+		inputStream=new ByteArrayInputStream("a3".getBytes());
+		sut=new view.ConsoleView(printStream, inputStream);
+		sut.input();  // forgot this
+		int actual=sut.getNumber();
+		int expected=3;
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void getHeap_shouldReturnANumber3()
+	{
+		inputStream=new ByteArrayInputStream("B 5".getBytes());
+		sut=new view.ConsoleView(printStream, inputStream);
+		sut.input();  // forgot this
+		int actual=sut.getNumber();
+		int expected=5;
 		assertEquals(actual, expected);
 	}
 	
