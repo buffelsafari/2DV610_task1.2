@@ -223,6 +223,7 @@ public class ConsoleViewTest
 	{
 		inputStream=new ByteArrayInputStream("a1".getBytes());
 		sut=new view.ConsoleView(printStream, inputStream);
+		sut.input();  // forgot this
 		String actual=sut.getHeap();
 		String expected="a";
 		assertEquals(actual, expected);

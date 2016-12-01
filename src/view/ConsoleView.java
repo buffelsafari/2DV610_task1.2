@@ -8,6 +8,7 @@ public class ConsoleView
 {
 	private PrintStream out;
 	private Scanner scanner;
+	String heapInput;
 	
 	// should display stuff on the console and get inputs from keyboard
 	public ConsoleView(PrintStream out, InputStream in)
@@ -71,7 +72,7 @@ public class ConsoleView
 			return false;
 		}
 		
-		String heapInput=str.substring(0, 1).toLowerCase();
+		heapInput=str.substring(0, 1).toLowerCase();
 		if(!(heapInput.equals("a") || heapInput.equals("b") || heapInput.equals("c")))
 		{
 			return false;
@@ -101,6 +102,6 @@ public class ConsoleView
 	// should return a string with the heap choosen in input 'a' || 'b' || 'c'
 	public String getHeap() 
 	{
-		return "";
+		return heapInput;
 	}
 }
