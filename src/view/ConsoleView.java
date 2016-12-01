@@ -113,6 +113,7 @@ public class ConsoleView
 		return numberInput;
 	}
 	
+	// should print input error message
 	public void showInputError()
 	{
 		out.println("Input error!");

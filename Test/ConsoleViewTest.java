@@ -10,6 +10,8 @@ import org.mockito.Mockito;
 
 import view.ConsoleView;
 
+// 100% test coverage, and all branches tested
+
 public class ConsoleViewTest 
 {
 	PrintStream printStream;
